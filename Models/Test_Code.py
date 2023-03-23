@@ -1,6 +1,5 @@
 import numpy as py
 import pandas as pd
-import re
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from flaml import AutoML
