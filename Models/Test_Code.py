@@ -63,13 +63,18 @@ print(automl.predict(X_train).shape)
 # Export the best model
 print(automl.model)
 
-#correlation heatmap
+#correlation heatmap moving to Data Visualization
+
 import seaborn as sns
 
-plt.subplots(figsize=(15,15))
-numeric_correlations = master_ws_data.corr() # correlations between numeric variables
-sns.heatmap(numeric_correlations, xticklabels=1, yticklabels=1)
+# calculate correlation matrix
+corr_matrix = df.corr()
+fig, ax = plt.subplots(figsize=(20,20))
 
+# plot heatmap
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+
+#I have it saved to my google drive right now. Biggest correlation for W/L is Strikes, Balls, Pitches, SO, BB, RBI, R, HR, X3B, X2B< X1B, H, PA, AB.
 
 
 
