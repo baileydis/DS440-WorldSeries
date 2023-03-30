@@ -75,16 +75,12 @@ fig, ax = plt.subplots(figsize=(20,20))
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
 
 #Correlation with output variable
-cor_target = abs(corr_matrix["W"])
+cor_target = abs(corr_matrix["win_percent"])
 #Selecting highly correlated features
 relevant_features_W = cor_target[cor_target>0.5]
 relevant_features_W
 
-#Correlation with output variable
-cor_target = abs(corr_matrix["L"])
-#Selecting highly correlated features
-relevant_features_L = cor_target[cor_target>0.5]
-relevant_features_L
+
 
 #I have it saved to my google drive right now. Biggest correlation for W/L is Strikes, Balls, Pitches, SO, BB, RBI, R, HR, X3B, X2B< X1B, H, PA, AB.
 
